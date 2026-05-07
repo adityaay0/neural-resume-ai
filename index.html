@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aura Resume Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="bg-glow"></div>
+
+  <nav>
+
+    <div class="logo">
+      Aura<span>Resume</span>
+    </div>
+
+    <button onclick="scrollToBuilder()">
+      Build Resume
+    </button>
+
+  </nav>
+
+  <section class="hero">
+
+    <div class="hero-left">
+
+      <div class="badge">
+        ✨ AI Inspired Resume Builder
+      </div>
+
+      <h1>
+        Build A Resume That Actually Feels Modern.
+      </h1>
+
+      <p>
+        Create aesthetic, cinematic and ATS-friendly resumes instantly.
+        Designed for creators, students, freelancers and dreamers.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="primary-btn" onclick="scrollToBuilder()">
+          Start Building
+        </button>
+
+        <button class="secondary-btn" onclick="showDemo()">
+          Watch Demo
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="hero-right">
+
+      <div class="resume-card">
+
+        <h2>
+          Aditya Saini
+        </h2>
+
+        <h3>
+          Digital Marketer
+        </h3>
+
+        <div class="resume-section">
+
+          <h4>
+            About
+          </h4>
+
+          <p>
+            Creative storyteller passionate about branding,
+            marketing and aesthetic digital experiences.
+          </p>
+
+        </div>
+
+        <div class="resume-section">
+
+          <h4>
+            Skills
+          </h4>
+
+          <p>
+            SEO • Canva • Branding • Content Creation • Social Media
+          </p>
+
+        </div>
+
+        <div class="resume-section">
+
+          <h4>
+            Experience
+          </h4>
+
+          <p>
+            Internship in digital marketing and social media optimization.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="features">
+
+    <div class="section-title">
+
+      <h2>
+        Features
+      </h2>
+
+      <p>
+        Everything needed for a modern resume experience.
+      </p>
+
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+
+        <div class="icon">
+          ⚡
+        </div>
+
+        <h3>
+          Live Preview
+        </h3>
+
+        <p>
+          Resume updates instantly while typing.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="icon">
+          🎨
+        </div>
+
+        <h3>
+          Aesthetic Design
+        </h3>
+
+        <p>
+          Minimal cinematic layouts with cozy visuals.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="icon">
+          📄
+        </div>
+
+        <h3>
+          PDF Download
+        </h3>
+
+        <p>
+          Save resumes instantly using browser export.
+        </p>
+
+      </div>
+
+      <div class="feature-card">
+
+        <div class="icon">
+          📱
+        </div>
+
+        <h3>
+          Mobile Friendly
+        </h3>
+
+        <p>
+          Works beautifully on phones and desktops.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="builder" id="builder">
+
+    <div class="section-title">
+
+      <h2>
+        Create Your Resume
+      </h2>
+
+      <p>
+        Fill your details and watch the preview come alive.
+      </p>
+
+    </div>
+
+    <div class="builder-container">
+
+      <div class="form-box">
+
+        <input type="text" id="name" placeholder="Full Name">
+
+        <input type="text" id="role" placeholder="Your Role">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <textarea id="about" rows="4" placeholder="About Yourself"></textarea>
+
+        <textarea id="skills" rows="4" placeholder="Skills"></textarea>
+
+        <textarea id="education" rows="4" placeholder="Education"></textarea>
+
+        <textarea id="experience" rows="4" placeholder="Experience"></textarea>
+
+        <button class="download-btn" onclick="downloadResume()">
+          Download Resume
+        </button>
+
+      </div>
+
+      <div class="preview-box" id="resumePreview">
+
+        <h1 id="previewName">
+          Your Name
+        </h1>
+
+        <h2 id="previewRole">
+          Your Role
+        </h2>
+
+        <div class="preview-section">
+
+          <h3>
+            Contact
+          </h3>
+
+          <p id="previewContact">
+            your@email.com
+          </p>
+
+        </div>
+
+        <div class="preview-section">
+
+          <h3>
+            About
+          </h3>
+
+          <p id="previewAbout">
+            Write about yourself...
+          </p>
+
+        </div>
+
+        <div class="preview-section">
+
+          <h3>
+            Skills
+          </h3>
+
+          <p id="previewSkills">
+            Your skills...
+          </p>
+
+        </div>
+
+        <div class="preview-section">
+
+          <h3>
+            Education
+          </h3>
+
+          <p id="previewEducation">
+            Your education...
+          </p>
+
+        </div>
+
+        <div class="preview-section">
+
+          <h3>
+            Experience
+          </h3>
+
+          <p id="previewExperience">
+            Your experience...
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Aura Resume Studio 🌌
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
